@@ -1,7 +1,7 @@
 # **Bollywood-Face-Detection**
 
 **Link For The Project:**
-https://app-car-price-prediction.herokuapp.com/
+https://bollywood-face-detection.herokuapp.com/
 
 ### **Vgg_Face Architecture**
 ![](https://i1.wp.com/sefiks.com/wp-content/uploads/2019/04/vgg-face-architecture.jpg?ssl=1)
