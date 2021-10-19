@@ -56,9 +56,9 @@ def recommend(feature_list,features):
     index_pos = sorted(list(enumerate(similarity)), reverse=True, key=lambda x: x[1])[0][0]
     return index_pos
 
-st.title('Which bollywood celebrity are you?')
+st.title('Know your Bollywood Celebrity?')
 
-uploaded_image = st.file_uploader('Choose an image')
+uploaded_image = st.file_uploader('Image')
 
 if uploaded_image is not None:
     # save the image in a directory
@@ -72,9 +72,13 @@ if uploaded_image is not None:
         index_pos = recommend(feature_list,features)
         predicted_actor = " ".join(filenames[index_pos].split('\\')[1].split('_'))
         # display
-        col1= st.beta_columns(2)
+        col1, col2, col3 = st.columns(3)
 
         with col1:
+            pass
+        with col2:
             v = filenames[index_pos].split("\\")[2]
             st.header(re.split('(\d+)',v)[0])
             st.image(display_image)
+        with col3:
+            pass
