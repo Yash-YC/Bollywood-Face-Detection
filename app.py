@@ -1,3 +1,4 @@
+## This app is made using Streamlit
 #!pip install streamlit
 from keras_vggface.utils import preprocess_input
 from keras_vggface.vggface import VGGFace
@@ -71,12 +72,9 @@ if uploaded_image is not None:
         index_pos = recommend(feature_list,features)
         predicted_actor = " ".join(filenames[index_pos].split('\\')[1].split('_'))
         # display
-        col1,col2 = st.beta_columns(2)
+        col1= st.beta_columns(2)
 
         with col1:
-            st.header('Your uploaded image')
-            st.image(display_image)
-        with col2:
             v = filenames[index_pos].split("\\")[2]
             st.header(re.split('(\d+)',v)[0])
-            st.image(filenames[index_pos] , width = 300)
+            st.image(display_image)
